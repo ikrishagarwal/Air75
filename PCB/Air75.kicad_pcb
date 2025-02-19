@@ -390,6 +390,7 @@
 			(uuid "209ee353-ed9c-4524-8ff8-ad0eff755006")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_Keyboard.3dshapes/SW_Cherry_MX_1.00u_PCB.wrl"
+			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1067,6 +1068,7 @@
 			(uuid "83096d13-6c37-45d8-a826-d7b9350d20ab")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_Keyboard.3dshapes/SW_Cherry_MX_1.00u_PCB.wrl"
+			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1375,6 +1377,7 @@
 			(uuid "7d7822b2-51e4-41bc-a3da-5e35ecc5283d")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_Keyboard.3dshapes/SW_Cherry_MX_1.00u_PCB.wrl"
+			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1683,6 +1686,7 @@
 			(uuid "b6df7da1-94be-4c9f-a71a-2108868f798e")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_Keyboard.3dshapes/SW_Cherry_MX_1.00u_PCB.wrl"
+			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1991,6 +1995,7 @@
 			(uuid "e9740c93-7af1-4658-bed6-8f64f3e1762f")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_Keyboard.3dshapes/SW_Cherry_MX_1.00u_PCB.wrl"
+			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)
@@ -2225,6 +2230,7 @@
 			(uuid "042a9018-7cff-4230-80a9-0d8c2566e26b")
 		)
 		(model "${SCOTTOKEEBS_KICAD}/3dmodels/ScottoKeebs_Components.3dshapes/OLED_128x32.step"
+			(hide yes)
 			(offset
 				(xyz 19 -6 2.5)
 			)
@@ -2533,6 +2539,7 @@
 			(uuid "ae13b088-f082-4a6a-8ba9-2f70ea640ef6")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_Keyboard.3dshapes/SW_Cherry_MX_1.00u_PCB.wrl"
+			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)
@@ -2841,6 +2848,7 @@
 			(uuid "14c45941-ec49-4d35-8ffb-14043d8fb002")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_Keyboard.3dshapes/SW_Cherry_MX_1.00u_PCB.wrl"
+			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3149,6 +3157,7 @@
 			(uuid "0f56821e-e4a3-4849-8164-210d55ab0f7a")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_Keyboard.3dshapes/SW_Cherry_MX_1.00u_PCB.wrl"
+			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3457,6 +3466,7 @@
 			(uuid "b66e4576-9ec3-4936-937a-0a024c0d91a5")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_Keyboard.3dshapes/SW_Cherry_MX_1.00u_PCB.wrl"
+			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)
