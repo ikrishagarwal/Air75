@@ -1,6 +1,6 @@
 # Air75
 
-![air75](https://raw.githubusercontent.com/ikrishagarwal/Air75/refs/heads/main/images/case.png)
+![air75](/images/board.jpg)
 
 A Macro Pad designed for productivity and efficiency, featuring a rotary encoder and an OLED display for enhanced functionality.
 
