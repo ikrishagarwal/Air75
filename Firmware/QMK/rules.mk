@@ -10,3 +10,6 @@ ENCODER_ENABLE = yes
 ENCODER_MAP_ENABLE = yes
 
 VIA_ENABLE = yes
+
+# Bongo cat OLED animation
+SRC += lib/bongocat.c
