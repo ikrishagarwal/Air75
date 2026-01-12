@@ -14,19 +14,19 @@ const uint16_t PROGMEM keymaps[4][MATRIX_ROWS][MATRIX_COLS] = {
     /* BASE Layer 0 */
     [0] = LAYOUT(
         LYR_CYC, G(KC_L),
-        KC_UP, KC_DOWN, KC_PGUP, KC_PGDN,
-        KC_LEFT, KC_RGHT, KC_HOME, KC_END),
+        KC_MPRV, KC_MPLY, KC_MNXT, LALT(KC_SPC),
+        KC_UP, KC_DOWN, KC_LEFT, KC_RGHT),
 
     /* Code Layer 1 */
     [1] = LAYOUT(
         _______, _______,
-        KC_MPRV, KC_MPLY, KC_MNXT, LALT(KC_SPC),
+        _______, _______, _______, _______,
         C(KC_C), C(KC_V), C(KC_X), C(KC_Z)),
 
     /* Vim Layer 2 */
     [2] = LAYOUT(
         _______, _______,
-        KC_MPRV, KC_MPLY, KC_MNXT, LALT(KC_SPC),
+        _______, _______, _______, _______,
         KC_J, KC_K, VIM_PST, VIM_CPY),
 
     /* Tools Layer 3 */
