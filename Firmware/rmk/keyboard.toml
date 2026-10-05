@@ -18,7 +18,7 @@ internal_pullup = true
 phase = "resolution"
 resolution = 4
 reverse = true
-debounce_ms = 0
+debounce_ms = 10
 
 [display]
 driver = "ssd1306"

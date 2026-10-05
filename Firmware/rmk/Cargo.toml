@@ -10,7 +10,7 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-rmk = { version = "0.9", features = ["rp2040", "display", "ssd1306", "vial", "storage"] }
+rmk = { version = "0.9", features = ["rp2040", "display", "ssd1306", "vial", "storage", "async_matrix"] }
 embassy-time = { version = "0.5", features = ["defmt"] }
 embedded-graphics = "0.8"
 embassy-rp = { version = "0.10", features = [
