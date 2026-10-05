@@ -1,43 +1,66 @@
+# Build and package the Air75 RP2040 firmware.
+# Run these tasks from the rmk/ directory:
+#
+#   cargo make uf2
+#
+# The final firmware is written to Air75.uf2 and can be copied to the
+# RP2040 BOOTSEL drive.
+
+[tasks.default]
+alias = "uf2"
+
 [tasks.install-llvm-tools]
 install_crate = { rustup_component_name = "llvm-tools" }
 
-[tasks.flip-link]
-install_crate = { crate_name = "flip-link", binary = "flip-link", test_arg = [
-    "-h",
-] }
+[tasks.install-flip-link]
+install_crate = { crate_name = "flip-link", binary = "flip-link", test_arg = ["--help"] }
+
+[tasks.install-cargo-binutils]
+install_crate = { crate_name = "cargo-binutils", binary = "cargo", test_arg = ["objcopy", "--help"] }
+
+[tasks.install-cargo-hex-to-uf2]
+install_crate = { crate_name = "cargo-hex-to-uf2", binary = "cargo", test_arg = ["hex-to-uf2", "--help"] }
 
 [tasks.build]
 command = "cargo"
-args = ["build", "--release"]
-dependencies = ["install-llvm-tools", "flip-link"]
+args = ["build", "--release", "--bin", "Air75"]
+dependencies = [
+    "install-llvm-tools",
+    "install-flip-link",
+]
 
-[tasks.objcopy]
-install_crate = { crate_name = "cargo-binutils", binary = "cargo", test_arg = [
-    "objcopy",
-    "--help",
-] }
+# Convert the linked ELF to Intel HEX. cargo-objcopy automatically uses the
+# target configured in .cargo/config.toml (thumbv6m-none-eabi).
+[tasks.hex]
 command = "cargo"
-args = ["objcopy", "--release", "--", "-O", "ihex", "AIR75.hex"]
-dependencies = ["build"]
+args = ["objcopy", "--release", "--bin", "Air75", "--", "-O", "ihex", "Air75.hex"]
+dependencies = [
+    "build",
+    "install-cargo-binutils",
+]
 
-[tasks.bin]
-command = "cargo"
-args = ["objcopy", "--release", "--", "-O", "binary", "AIR75.bin"]
-dependencies = ["build"]
-
+# Create a UF2 using the RP2040 family ID required by the BOOTSEL bootloader.
 [tasks.uf2]
-install_crate = { crate_name = "cargo-hex-to-uf2", binary = "cargo", test_arg = [
-    "hex-to-uf2",
-    "--help",
-] }
 command = "cargo"
 args = [
     "hex-to-uf2",
     "--input-path",
-    "AIR75.hex",
+    "Air75.hex",
     "--output-path",
-    "AIR75.uf2",
+    "Air75.uf2",
     "--family",
     "rp2040",
 ]
-dependencies = ["objcopy"]
+dependencies = [
+    "hex",
+    "install-cargo-hex-to-uf2",
+]
+
+# Optional raw binary output.
+[tasks.bin]
+command = "cargo"
+args = ["objcopy", "--release", "--bin", "Air75", "--", "-O", "binary", "Air75.bin"]
+dependencies = [
+    "build",
+    "install-cargo-binutils",
+]

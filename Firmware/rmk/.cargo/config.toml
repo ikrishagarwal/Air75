@@ -1,1 +1,5 @@
-KEYBOARD_TOML_PATH = "keyboard.toml"
+[build]
+target = "thumbv6m-none-eabi"
+
+[env]
+KEYBOARD_TOML_PATH = { value = "keyboard.toml", relative = true }

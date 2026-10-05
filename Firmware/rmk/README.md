@@ -2,6 +2,20 @@
 
 RMK is a feature-rich and easy-to-use keyboard firmware.
 
+## Air75 configuration
+
+Edit `keyboard.toml` for the matrix pins and bootmagic key, encoder settings,
+keymaps, Vim macro sequences, Vial/storage settings, and OLED hardware and redraw
+intervals. RMK generates their setup; `src/main.rs` only invokes the keyboard macro.
+
+The bongo-cat renderer and bitmap artwork remain in `src/bongocat_renderer.rs` and
+`src/bongocat_frames.rs`. The build script derives OLED layer names and encoder
+labels from the TOML's default keymap, so those labels need no separate Rust edits.
+Labels describe the compiled defaults, not encoder mappings changed through Vial.
+
+Use `clear_storage = false` to preserve saved Vial settings. Set it to `true`
+only for an intentional reset, then restore `false` before normal use.
+
 ## Use the template
 
 1. Install [probe-rs](https://github.com/probe-rs/probe-rs)
