@@ -160,6 +160,13 @@ impl DisplayRenderer<BinaryColor> for BongocatRenderer {
         self.advance_animation();
         display.clear(BinaryColor::Off).ok();
 
+        // Match QMK's OLED suspend behavior: leave the framebuffer blank while
+        // the host has suspended the USB connection (for example, when the
+        // laptop lid is closed).
+        if ctx.sleeping {
+            return;
+        }
+
         let layer_idx = usize::from(ctx.layer);
         if layer_idx < LAYER_NAMES.len() {
             Text::with_baseline(

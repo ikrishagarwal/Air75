@@ -44,7 +44,7 @@ insecure = false
 [storage]
 enabled = true
 # Set clear_storage to false to keep Vial changes across reboots.
-clear_storage = true # Set true only for a deliberate reset of saved Vial settings.
+clear_storage = false # Set true only for a deliberate reset of saved Vial settings.
 
 # Macro(0): Vim copy ("*y).
 [[behavior.macros.macros]]
